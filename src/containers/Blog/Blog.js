@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-//import axios from 'axios';
 import { Route, NavLink } from 'react-router-dom';
 import './Blog.css';
 import Posts from './Posts/Posts';
@@ -15,7 +14,12 @@ class Blog extends Component {
                             <li><NavLink 
                                 to="/" 
                                 exact
-                                activeClassName="my-active">Home</NavLink></li>
+                                activeClassName="my-active"
+                                activeStyle={{
+                                    color: '#fa923f',
+                                    textDecoration: 'underline'
+                                }}
+                                >Home</NavLink></li>
                             <li><NavLink to={{
                                 pathname: '/new-post', 
                                 hash: '#submit',
